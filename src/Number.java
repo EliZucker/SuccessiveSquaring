@@ -1,7 +1,7 @@
 
 public class Number {
 	
-	//Create the double variable number
+	//Create a double variable corresponding to the object's number
 	private double number;
 	
 	/**
