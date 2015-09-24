@@ -1,14 +1,16 @@
+import java.math.BigDecimal;
+import java.math.BigInteger;
 
 public class Number {
 	
 	//Create a double variable corresponding to the object's number
-	private double number;
+	private BigDecimal number;
 	
 	/**
 	 * Basic constructor that assigns the parameter number to the instance double number
 	 * @param number the value to assign to number
 	 */
-	public Number(double number) {
+	public Number(BigDecimal number) {
 		this.number=number;
 		
 	}
@@ -17,7 +19,7 @@ public class Number {
 	 * standard getter that returns the number value 
 	 * @return the value of number
 	 */
-	public double getNumber() {
+	public BigDecimal getNumber() {
 		return number;
 	}
 	
@@ -25,7 +27,7 @@ public class Number {
 	 * Setter method that changes the value of the instance double number
 	 * @param value you want to change number to
 	 */
-	public void setNumber(double value) {
+	public void setNumber(BigDecimal value) {
 		number = value;
 	}
 	
@@ -33,7 +35,7 @@ public class Number {
 	 * Utilizes the utilities class to raise number to a value
 	 * @param expValue the exponent value
 	 */
-	public void pow (int expValue) {
+	public void pow (BigInteger expValue) {
 		number = Utilities.expWithSquaring(number, expValue);
 	}
 	
@@ -42,6 +44,6 @@ public class Number {
 	 */
 	@Override
 	public String toString() {
-		return Double.toString(number);
+		return String.valueOf(number);
 	}
 }

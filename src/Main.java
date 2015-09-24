@@ -1,3 +1,6 @@
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
 import javax.swing.JOptionPane;
 
 public class Main {
@@ -11,9 +14,9 @@ public class Main {
 	public static void main(String args[]) {
 
 		//Obtain a double value using a the showInputDialog method (value of base)
-		double value = 0;
+		BigDecimal value = BigDecimal.ZERO;
 		try {
-			value = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the base value:", title, JOptionPane.QUESTION_MESSAGE));
+			value = new BigDecimal(JOptionPane.showInputDialog(null, "Enter the base value:", title, JOptionPane.QUESTION_MESSAGE));
 		}
 		catch (NumberFormatException e) {
 			JOptionPane.showMessageDialog(null, "It seems that you did not enter a valid input. Please restart the program.", title, JOptionPane.INFORMATION_MESSAGE);
@@ -25,9 +28,9 @@ public class Main {
 		Number num = new Number(value);
 
 		//Obtain a double exponentValue using a the showInputDialog method (value of exponent)
-		int exponentValue=0;
+		BigInteger exponentValue = BigInteger.ZERO;
 		try {
-			exponentValue = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the exponent value (integer):", title, JOptionPane.QUESTION_MESSAGE));
+			exponentValue = new BigInteger(JOptionPane.showInputDialog(null, "Enter the exponent value (integer):", title, JOptionPane.QUESTION_MESSAGE));
 		} 
 		catch (NumberFormatException e) {
 			JOptionPane.showMessageDialog(null, "It seems that you did not enter a valid input. Please restart the program.", title, JOptionPane.INFORMATION_MESSAGE);
